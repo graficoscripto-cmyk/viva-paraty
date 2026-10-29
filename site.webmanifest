@@ -1,0 +1,27 @@
+{
+  "name": "Viva Paraty! — Agência de Roteiros em Paraty, RJ",
+  "short_name": "Viva Paraty",
+  "description": "Agência de roteiros selecionados a dedo em Paraty, RJ: passeios de lancha privativa e escuna pela Baía de Paraty, Saco do Mamanguá (Fiorde Tropical), Jeep Tour Cachoeiras & Alambiques e Centro Histórico.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A241D",
+  "theme_color": "#16995A",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "img/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "img/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

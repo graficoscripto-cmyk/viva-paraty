@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Viva Paraty">
+  <defs>
+    <linearGradient id="favBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E382C"/>
+      <stop offset="50%" stop-color="#16995A"/>
+      <stop offset="100%" stop-color="#0A2921"/>
+    </linearGradient>
+  </defs>
+  <circle cx="60" cy="60" r="57" fill="url(#favBg)"/>
+  <circle cx="60" cy="60" r="52" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.9"/>
+  <circle cx="60" cy="60" r="45.5" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="0.5 7.5" opacity="0.9"/>
+  <!-- Stylized V° monogram + Viva magenta dot -->
+  <path d="M36 42 L53 84 L74 38" fill="none" stroke="#FFFFFF" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="82" cy="46" r="7.5" fill="#E63E7A" stroke="#FFFFFF" stroke-width="2.5"/>
+</svg>
