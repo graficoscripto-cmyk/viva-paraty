@@ -167,7 +167,7 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "Onde acontecem os embarques dos passeios em Paraty?",
+            "name": "Onde é o embarque?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Nosso ponto de apoio fica na R. Ten. Francisco Antonio, no Centro Histórico de Paraty, a poucos passos do Cais de Turismo, de onde partem os passeios diários de escuna (saída às 11h00) e as lanchas privativas."
@@ -175,7 +175,7 @@
           },
           {
             "@type": "Question",
-            "name": "Como funciona o passeio de 1 dia ao Saco do Mamanguá?",
+            "name": "Como é o Mamanguá?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "O Saco do Mamanguá é o único fiorde tropical do Brasil, com 8 km de águas abrigadas entre montanhas de Mata Atlântica. Organizamos o roteiro de 1 dia com travessia náutica, paradas para banho em praias de água cristalina e opção de subida guiada ao Mirante do Pico do Pão de Açúcar."
@@ -1151,13 +1151,13 @@
 
     .ig-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
     }
 
     @media (min-width: 820px) {
       .ig-grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 18px;
       }
     }
@@ -1677,6 +1677,11 @@
       height: 30px;
       fill: currentColor;
     }
+
+    /* Otimização 29/10: cards enxutos */
+    .tour-footer { justify-content: stretch; }
+    .tour-footer .btn-tour-select { width: 100%; justify-content: center; }
+    .tour-desc { font-size: 15px; margin-bottom: 14px; }
   </style>
 </head>
 <body>
@@ -1729,20 +1734,18 @@
         <div class="hero-content">
           <div class="hero-badge">
             <span class="hero-badge-dot" aria-hidden="true"></span>
-            <span>Agência de Roteiros · Centro Histórico, Paraty</span>
+            <span>Agência de Roteiros · Paraty</span>
           </div>
 
           <h1 class="hero-title">
-            Paraty com roteiros <em>selecionados a dedo.</em>
+            Paraty, <em>do seu jeito.</em>
           </h1>
 
-          <p class="hero-subtitle">
-            Lancha privativa, escuna diária às 11h, Saco do Mamanguá e cachoeiras com curadoria local no Cais de Paraty.
-          </p>
+          <p class="hero-subtitle">Barco, lancha, fiorde e cachoeiras.</p>
 
           <div class="hero-actions">
             <a href="#monte-roteiro" class="btn-primary">
-              <span>Montar meu roteiro agora</span>
+              <span>Montar meu roteiro</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>
@@ -1762,8 +1765,7 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/></svg>
             </span>
             <div class="trust-text">
-              <strong>Saídas Diárias às 11h</strong>
-              <span>Embarque no Cais de Paraty</span>
+              <strong>Saída diária às 11h</strong>
             </div>
           </div>
 
@@ -1772,8 +1774,7 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             </span>
             <div class="trust-text">
-              <strong>Curadoria Local Real</strong>
-              <span>Marinheiros e guias credenciados</span>
+              <strong>Guias locais</strong>
             </div>
           </div>
 
@@ -1782,8 +1783,7 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             </span>
             <div class="trust-text">
-              <strong>Privativo ou Compartilhado</strong>
-              <span>No ritmo da sua viagem</span>
+              <strong>Privativo ou compartilhado</strong>
             </div>
           </div>
 
@@ -1792,8 +1792,7 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
             </span>
             <div class="trust-text">
-              <strong>Base no Centro Histórico</strong>
-              <span>R. Ten. Francisco Antonio</span>
+              <strong>Centro Histórico</strong>
             </div>
           </div>
         </div>
@@ -1805,20 +1804,18 @@
       <div class="container">
         <div class="tours-header">
           <div>
-            <span class="section-eyebrow">Curadoria @vivaparatyrj</span>
+            <span class="section-eyebrow">Roteiros</span>
             <h2 class="section-title" id="roteiros-heading">
-              Nossos Roteiros <em>Selecionados a Dedo</em>
+              Escolha seu <em>passeio</em>
             </h2>
-            <p class="section-lead">
-              Das enseadas de água transparente da Baía de Paraty ao único fiorde tropical do Brasil. Escolha as experiências que você quer viver e monte seu pacote sob medida.
-            </p>
+            
           </div>
 
           <div class="tours-filter-bar" role="tablist" aria-label="Filtrar roteiros por estilo">
-            <button type="button" class="filter-chip active" data-filter="todos">Todos (4)</button>
-            <button type="button" class="filter-chip" data-filter="mar">Mar & Ilhas</button>
-            <button type="button" class="filter-chip" data-filter="fiorde">Saco do Mamanguá</button>
-            <button type="button" class="filter-chip" data-filter="terra">Cachoeiras & Cultura</button>
+            <button type="button" class="filter-chip active" data-filter="todos">Todos</button>
+            <button type="button" class="filter-chip" data-filter="mar">Mar</button>
+            <button type="button" class="filter-chip" data-filter="fiorde">Mamanguá</button>
+            <button type="button" class="filter-chip" data-filter="terra">Terra</button>
           </div>
         </div>
 
@@ -1839,28 +1836,16 @@
                 />
               </picture>
               <div class="tour-pills">
-                <span class="tour-tag highlight">Mais Pedido · Mar Calmo</span>
-                <span class="tour-time">Saída diária 11h ou Flexível</span>
+                <span class="tour-tag highlight">Mais pedido</span>
+                <span class="tour-time">11h ou flexível</span>
               </div>
             </div>
             <div class="tour-content">
-              <h3 class="tour-title">Baía de Paraty: Lagoa Azul, Praia Vermelha & Ilhas</h3>
-              <p class="tour-desc">
-                Navegue por enseadas abrigadas sem ondas, perfeitas para flutuação com peixes coloridos e banho de mar em águas cristalinas. Disponível no roteiro diário às 11h00 ou em lancha privativa exclusiva.
-              </p>
-              <ul class="tour-stops" aria-label="Paradas do roteiro">
-                <li>Lagoa Azul</li>
-                <li>Praia Vermelha</li>
-                <li>Ilha Comprida</li>
-                <li>Praia da Lula</li>
-              </ul>
+              <h3 class="tour-title">Baía de Paraty: Lagoa Azul & Ilhas</h3>
+              <p class="tour-desc">Águas calmas e cristalinas. Saída às 11h ou lancha privativa.</p>
               <div class="tour-footer">
-                <div class="tour-meta">
-                  <strong>Lancha Privativa ou Escuna</strong>
-                  <span>Duração média: 5 horas</span>
-                </div>
                 <button type="button" class="btn-tour-select" data-select-tour="Baía de Paraty (Ilhas & Praia Vermelha)">
-                  <span>Incluir no Roteiro</span>
+                  <span>Incluir</span>
                 </button>
               </div>
             </div>
@@ -1882,28 +1867,16 @@
                 />
               </picture>
               <div class="tour-pills">
-                <span class="tour-tag emerald">Único Fiorde Tropical do Brasil</span>
-                <span class="tour-time">1 Dia de Passeio</span>
+                <span class="tour-tag emerald">Fiorde tropical</span>
+                <span class="tour-time">Dia inteiro</span>
               </div>
             </div>
             <div class="tour-content">
-              <h3 class="tour-title">Saco do Mamanguá — Expedição Fiorde Tropical</h3>
-              <p class="tour-desc">
-                Um braço de mar de 8 km cercado por montanhas de Mata Atlântica intocada e 33 praias de águas mansas. Um destino exótico e único no Brasil, com parada na Praia do Cruzeiro e trilha opcional ao mirante.
-              </p>
-              <ul class="tour-stops" aria-label="Paradas do roteiro">
-                <li>Fiorde de 8 km</li>
-                <li>Praia do Cruzeiro</li>
-                <li>Mirante Pão de Açúcar</li>
-                <li>Almoço Caiçara</li>
-              </ul>
+              <h3 class="tour-title">Saco do Mamanguá</h3>
+              <p class="tour-desc">O único fiorde tropical do Brasil. Dia inteiro de passeio.</p>
               <div class="tour-footer">
-                <div class="tour-meta">
-                  <strong>Lancha Rápida ou Barco</strong>
-                  <span>Experiência de dia inteiro</span>
-                </div>
                 <button type="button" class="btn-tour-select" data-select-tour="Saco do Mamanguá (Fiorde Tropical)">
-                  <span>Incluir no Roteiro</span>
+                  <span>Incluir</span>
                 </button>
               </div>
             </div>
@@ -1925,28 +1898,16 @@
                 />
               </picture>
               <div class="tour-pills">
-                <span class="tour-tag">Mata Atlântica · 4x4</span>
-                <span class="tour-time">Saída Manhã</span>
+                <span class="tour-tag">Mata Atlântica</span>
+                <span class="tour-time">Manhã</span>
               </div>
             </div>
             <div class="tour-content">
-              <h3 class="tour-title">Jeep Tour 4x4: Cachoeiras da Bocaina & Alambiques</h3>
-              <p class="tour-desc">
-                Suba a Serra da Bocaina para mergulhar em poços naturais de água verde-esmeralda e conheça a tradição centenária dos alambiques de cachaça artesanal de Paraty com degustação guiada.
-              </p>
-              <ul class="tour-stops" aria-label="Paradas do roteiro">
-                <li>Cachoeira do Tobogã</li>
-                <li>Poço do Tarzan</li>
-                <li>Pedra Branca</li>
-                <li>Alambiques Premiados</li>
-              </ul>
+              <h3 class="tour-title">Jeep 4x4: Cachoeiras & Alambiques</h3>
+              <p class="tour-desc">Poços de água verde e cachaça artesanal.</p>
               <div class="tour-footer">
-                <div class="tour-meta">
-                  <strong>Passeio Terrestre Guiado</strong>
-                  <span>Duração média: 5 a 6 horas</span>
-                </div>
                 <button type="button" class="btn-tour-select" data-select-tour="Jeep Tour Cachoeiras & Alambiques">
-                  <span>Incluir no Roteiro</span>
+                  <span>Incluir</span>
                 </button>
               </div>
             </div>
@@ -1968,28 +1929,16 @@
                 />
               </picture>
               <div class="tour-pills">
-                <span class="tour-tag">Patrimônio Mundial UNESCO</span>
-                <span class="tour-time">Horário Flexível</span>
+                <span class="tour-tag">UNESCO</span>
+                <span class="tour-time">Flexível</span>
               </div>
             </div>
             <div class="tour-content">
-              <h3 class="tour-title">Centro Histórico Colonial & Roteiros Combinados</h3>
-              <p class="tour-desc">
-                Caminhe pelas ruas de pedra pé-de-moleque do século XVIII com dicas locais e combine mar + cachoeira + gastronomia em um cronograma pensado para os dias que você vai ficar em Paraty.
-              </p>
-              <ul class="tour-stops" aria-label="Paradas do roteiro">
-                <li>Rua do Fogo & Maré Cheia</li>
-                <li>Igreja Santa Rita</li>
-                <li>Ateliês Locais</li>
-                <li>Roteiro de 2 ou 3 Dias</li>
-              </ul>
+              <h3 class="tour-title">Centro Histórico & Roteiros Combinados</h3>
+              <p class="tour-desc">Ruas do século XVIII e roteiro sob medida.</p>
               <div class="tour-footer">
-                <div class="tour-meta">
-                  <strong>Curadoria Personalizada</strong>
-                  <span>Ideal para fim de semana ou feriado</span>
-                </div>
                 <button type="button" class="btn-tour-select" data-select-tour="Centro Histórico & Roteiro Combinado">
-                  <span>Incluir no Roteiro</span>
+                  <span>Incluir</span>
                 </button>
               </div>
             </div>
@@ -2001,13 +1950,11 @@
     <!-- INTERACTIVE MAP OF PARATY BAY & ROUTES -->
     <section class="section map-section" id="mapa-baia" aria-labelledby="mapa-heading">
       <div class="container">
-        <span class="section-eyebrow" style="background: rgba(38,196,114,0.2); color: #8MF5BA; color: #7DF2B2;">Geografia de Paraty · Mar & Serra</span>
+        <span class="section-eyebrow" style="background: rgba(38,196,114,0.2); color: #8MF5BA; color: #7DF2B2;">Mapa da Baía</span>
         <h2 class="section-title" id="mapa-heading">
-          Toque nos pontos e explore a <em>Baía de Paraty</em>
+          Toque e <em>explore a baía</em>
         </h2>
-        <p class="section-lead">
-          Com mais de 65 ilhas protegidas pela Restinga da Juatinga e pela Serra da Bocaina, Paraty tem águas abrigadas o ano inteiro. Veja onde ficam as paradas principais:
-        </p>
+        
 
         <div class="map-layout">
           <div class="bay-map-board">
@@ -2093,8 +2040,8 @@
             <button type="button" class="map-stop-btn active" data-stop="0" data-coord="PARADA 01 · CAIS & CENTRO HISTÓRICO">
               <span class="map-stop-num">01</span>
               <div class="map-stop-info">
-                <strong>Centro Histórico & Cais de Paraty</strong>
-                <span>Ponto de encontro na R. Ten. Francisco Antonio e embarque para os roteiros diários às 11h00 e lanchas privativas.</span>
+                <strong>Cais de Paraty</strong>
+                <span>Embarque dos passeios.</span>
               </div>
             </button>
 
@@ -2102,7 +2049,7 @@
               <span class="map-stop-num">02</span>
               <div class="map-stop-info">
                 <strong>Praia da Lula & Ilha Comprida</strong>
-                <span>Areia clara cercada pela Mata Atlântica e aquário natural perfeito para snorkel com peixes.</span>
+                <span>Snorkel com peixes.</span>
               </div>
             </button>
 
@@ -2110,23 +2057,23 @@
               <span class="map-stop-num">03</span>
               <div class="map-stop-info">
                 <strong>Lagoa Azul & Praia Vermelha</strong>
-                <span>Piscinas naturais de águas verde-esmeralda calmas e cristalinas — destaque do nosso roteiro diário.</span>
+                <span>Piscinas naturais calmas.</span>
               </div>
             </button>
 
             <button type="button" class="map-stop-btn" data-stop="3" data-coord="PARADA 04 · SACO DO MAMANGUÁ (FIORDE TROPICAL)">
               <span class="map-stop-num">04</span>
               <div class="map-stop-info">
-                <strong>Saco do Mamanguá — Fiorde Tropical</strong>
-                <span>8 km de mar abrigado entre montanhas, 33 praias preservadas e vista inesquecível do Pico do Pão de Açúcar.</span>
+                <strong>Saco do Mamanguá</strong>
+                <span>8 km de mar entre montanhas.</span>
               </div>
             </button>
 
             <button type="button" class="map-stop-btn" data-stop="4" data-coord="PARADA 05 · CACHOEIRAS & ALAMBIQUES">
               <span class="map-stop-num">05</span>
               <div class="map-stop-info">
-                <strong>Serra da Bocaina: Cachoeiras & Alambiques</strong>
-                <span>Cachoeira do Tobogã, Poço do Tarzan e degustação das famosas cachaças artesanais de Paraty.</span>
+                <strong>Cachoeiras & Alambiques</strong>
+                <span>Cachoeiras e cachaça artesanal.</span>
               </div>
             </button>
           </div>
@@ -2139,52 +2086,33 @@
       <div class="container">
         <div class="ig-header">
           <div>
-            <span class="section-eyebrow magenta">Direto do Nosso Instagram</span>
+            <span class="section-eyebrow magenta">Instagram</span>
             <h2 class="section-title" id="ig-heading">
-              Registros Reais da <em>@vivaparatyrj</em>
+              Direto do <em>@vivaparatyrj</em>
             </h2>
-            <p class="section-lead">
-              Momentos registrados nos nossos passeios pela Baía de Paraty, Praia Vermelha e Saco do Mamanguá.
-            </p>
+            
           </div>
 
           <a href="https://www.instagram.com/vivaparatyrj/" target="_blank" rel="noopener noreferrer" class="ig-profile-pill">
             <img src="img/apple-touch-icon.png" alt="Perfil oficial @vivaparatyrj" width="32" height="32" loading="lazy" />
-            <span>@vivaparatyrj · Ver perfil no Instagram ↗</span>
+            <span>Ver perfil ↗</span>
           </a>
         </div>
 
         <div class="ig-grid">
           <figure class="ig-card">
             <img src="img/viva-praia-secreta.webp" alt="Praia de areia dourada emoldurada por árvores da Mata Atlântica em Paraty" width="640" height="800" loading="lazy" decoding="async" />
-            <figcaption class="ig-caption">
-              <span>Enseadas de Paraty</span>
-              Praias tranquilas cercadas pela Mata Atlântica
-            </figcaption>
+            <figcaption class="ig-caption"><span>Enseadas de Paraty</span></figcaption>
           </figure>
 
           <figure class="ig-card">
             <img src="img/viva-arco-iris-baia.webp" alt="Arco-íris sobre escuna navegando na Baía de Paraty registrado pela Viva Paraty" width="360" height="640" loading="lazy" decoding="async" />
-            <figcaption class="ig-caption">
-              <span>Navegação na Baía</span>
-              Fim de tarde com arco-íris no retorno ao Cais
-            </figcaption>
+            <figcaption class="ig-caption"><span>Navegação na Baía</span></figcaption>
           </figure>
 
           <figure class="ig-card">
             <img src="img/viva-barco-tradicional.webp" alt="Barco tradicional caiçara navegando nas águas azuis de Paraty" width="360" height="640" loading="lazy" decoding="async" />
-            <figcaption class="ig-caption">
-              <span>Roteiro Diário às 11h</span>
-              Cores autênticas da cultura caiçara de Paraty
-            </figcaption>
-          </figure>
-
-          <figure class="ig-card">
-            <img src="img/mamangua-enseada-barco-m.webp" alt="Barco ancorado nas águas calmas do Saco do Mamanguá em Paraty" width="1080" height="807" loading="lazy" decoding="async" />
-            <figcaption class="ig-caption">
-              <span>Fiorde Tropical</span>
-              Águas mansas no coração do Saco do Mamanguá
-            </figcaption>
+            <figcaption class="ig-caption"><span>Roteiro Diário às 11h</span></figcaption>
           </figure>
         </div>
       </div>
@@ -2194,13 +2122,11 @@
     <section class="section planner-section" id="monte-roteiro" aria-labelledby="planner-heading">
       <div class="container">
         <div style="margin-bottom: 26px;">
-          <span class="section-eyebrow">Atendimento Direto no WhatsApp</span>
+          <span class="section-eyebrow">WhatsApp</span>
           <h2 class="section-title" id="planner-heading">
             Monte seu Roteiro <em>Sob Medida</em>
           </h2>
-          <p class="section-lead">
-            Selecione os passeios que você quer conhecer, escolha o formato e receba a disponibilidade e condições diretamente no seu WhatsApp em poucos minutos.
-          </p>
+          
         </div>
 
         <div class="planner-box">
@@ -2209,7 +2135,7 @@
             <div class="planner-step">
               <div class="planner-step-label">
                 <span class="planner-step-num">1</span>
-                <span>Quais roteiros você quer incluir? (pode marcar mais de um)</span>
+                <span>Quais passeios?</span>
               </div>
               <div class="planner-choices" id="plannerTours">
                 <button type="button" class="choice-btn selected" data-tour="Baía de Paraty (Ilhas & Praia Vermelha)">
@@ -2235,7 +2161,7 @@
             <div class="planner-step">
               <div class="planner-step-label">
                 <span class="planner-step-num">2</span>
-                <span>Formato preferido e detalhes do grupo</span>
+                <span>Formato e grupo</span>
               </div>
               <div class="planner-row-grid">
                 <div class="field-box">
@@ -2248,7 +2174,7 @@
                 </div>
 
                 <div class="field-box">
-                  <label for="planPeople">Quantidade de Pessoas</label>
+                  <label for="planPeople">Pessoas</label>
                   <select id="planPeople">
                     <option value="2 adultos (Casal)">2 pessoas (Casal)</option>
                     <option value="3 a 4 pessoas (Família/Amigos)">3 a 4 pessoas</option>
@@ -2259,7 +2185,7 @@
                 </div>
 
                 <div class="field-box">
-                  <label for="planDate">Quando pretende ir?</label>
+                  <label for="planDate">Quando?</label>
                   <input type="text" id="planDate" placeholder="Ex.: Próximo fim de semana" value="Próximo fim de semana" />
                 </div>
               </div>
@@ -2269,7 +2195,7 @@
           <aside class="planner-summary" aria-label="Resumo do pedido para WhatsApp">
             <div>
               <span class="summary-badge">● Pronto para Enviar</span>
-              <h3 class="summary-title">Sua mensagem para a Viva Paraty:</h3>
+              <h3 class="summary-title">Sua mensagem:</h3>
               <div class="wa-preview-bubble" id="waPreviewText">
                 Olá, equipe Viva Paraty! Gostaria de montar meu roteiro em Paraty:
                 • Roteiros: Baía de Paraty (Ilhas & Praia Vermelha)
@@ -2290,11 +2216,8 @@
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M20.52 3.48A11.82 11.82 0 0 0 12.06 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.15 1.6 5.95L0 24l6.33-1.66a11.86 11.86 0 0 0 5.73 1.46h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.17-3.44-8.42zM12.07 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.76.98 1-3.66-.24-.38a9.85 9.85 0 0 1-1.51-5.25c0-5.45 4.44-9.89 9.9-9.89 2.64 0 5.13 1.03 7 2.9a9.83 9.83 0 0 1 2.9 7c0 5.46-4.44 9.89-9.89 9.89zm5.43-7.41c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35z"/>
                 </svg>
-                <span>Consultar Disponibilidade no WhatsApp</span>
+                <span>Pedir no WhatsApp</span>
               </a>
-              <p class="summary-note">
-                Atendimento rápido pelo WhatsApp oficial <strong>(24) 99963-3930</strong>
-              </p>
             </div>
           </aside>
         </div>
@@ -2306,13 +2229,11 @@
       <div class="container">
         <div class="faq-loc-grid">
           <div>
-            <span class="section-eyebrow">Dúvidas Frequentes</span>
+            <span class="section-eyebrow">Dúvidas</span>
             <h2 class="section-title" id="faq-heading">
-              Tudo pronto para você <em>curtir Paraty</em>
+              Perguntas <em>rápidas</em>
             </h2>
-            <p class="section-lead">
-              Respostas diretas para você planejar seu passeio de barco, lancha ou cachoeira com segurança.
-            </p>
+            
 
             <div class="faq-list">
               <details class="faq-item" open>
@@ -2321,7 +2242,7 @@
                   <span class="faq-plus" aria-hidden="true">+</span>
                 </summary>
                 <div class="faq-answer">
-                  Nosso ponto de apoio fica na <strong>R. Ten. Francisco Antonio, no Centro Histórico de Paraty</strong>, pertinho do Cais de Turismo, de onde partem os roteiros diários às 11h00 e as lanchas privativas. Enviamos a localização exata pelo WhatsApp após a confirmação.
+                  <strong>R. Ten. Francisco Antonio, Centro Histórico</strong>, perto do Cais. Mandamos a localização exata no WhatsApp.
                 </div>
               </details>
 
@@ -2331,27 +2252,17 @@
                   <span class="faq-plus" aria-hidden="true">+</span>
                 </summary>
                 <div class="faq-answer">
-                  O Saco do Mamanguá é o único fiorde tropical do Brasil: um braço de mar de 8 km cercado por montanhas verdes e águas calmas. Fazemos o roteiro de 1 dia com parada para banho em praias cristalinas, opção de trilha até o Mirante do Pão de Açúcar e parada para almoço tradicional caiçara.
+                  Único fiorde tropical do Brasil: 8 km de mar calmo, praias para banho, trilha opcional e almoço caiçara.
                 </div>
               </details>
 
               <details class="faq-item">
                 <summary>
-                  <span>Qual a diferença entre o roteiro diário às 11h e a lancha privativa?</span>
+                  <span>Compartilhado ou privativo?</span>
                   <span class="faq-plus" aria-hidden="true">+</span>
                 </summary>
                 <div class="faq-answer">
-                  No <strong>roteiro diário compartilhado (saída às 11h00)</strong>, você garante excelente custo-benefício conhecendo paradas clássicas como Praia Vermelha, Lagoa Azul e Praia da Lula. Na <strong>lancha privativa</strong>, a embarcação é exclusiva do seu grupo, com horário de saída flexível e escolha livre do tempo em cada parada.
-                </div>
-              </details>
-
-              <details class="faq-item">
-                <summary>
-                  <span>As águas da Baía de Paraty são calmas para crianças e idosos?</span>
-                  <span class="faq-plus" aria-hidden="true">+</span>
-                </summary>
-                <div class="faq-answer">
-                  Sim! A Baía de Paraty é protegida do mar aberto por dezenas de ilhas e pela península da Juatinga, formando verdadeiras piscinas naturais sem ondas fortes — ideal para famílias com crianças, casais e melhor idade.
+                  <strong>Compartilhado:</strong> saída às 11h, ótimo custo-benefício. <strong>Privativo:</strong> barco só seu, horário e paradas livres.
                 </div>
               </details>
             </div>
@@ -2373,13 +2284,11 @@
               </picture>
             </div>
             <div class="loc-card-body">
-              <span class="summary-badge">📍 Ponto de Encontro em Paraty</span>
-              <h3>Centro Histórico & Cais de Paraty</h3>
+              <span class="summary-badge">📍 Paraty - RJ</span>
+              <h3>Cais de Paraty</h3>
               <p class="loc-address">
-                <strong>R. Ten. Francisco Antonio — Centro Histórico</strong><br />
-                Paraty - RJ, 23970-000<br />
-                WhatsApp Oficial: <strong>(24) 99963-3930</strong><br />
-                Atendimento diário: 08h00 às 21h00
+                R. Ten. Francisco Antonio, Centro Histórico<br />
+                Diário, 08h às 21h · <strong>(24) 99963-3930</strong>
               </p>
               <div class="loc-actions">
                 <a
@@ -2388,7 +2297,7 @@
                   rel="noopener noreferrer"
                   class="btn-loc"
                 >
-                  <span>Abrir no Google Maps ↗</span>
+                  <span>Ver no Maps ↗</span>
                 </a>
                 <a
                   href="https://wa.me/5524999633930?text=Ol%C3%A1!%20Estou%20no%20site%20da%20Viva%20Paraty%20e%20quero%20tirar%20uma%20d%C3%BAvida%20sobre%20os%20passeios."
@@ -2397,7 +2306,7 @@
                   class="btn-loc"
                   style="background: rgba(38,196,114,0.22); border-color: rgba(38,196,114,0.45);"
                 >
-                  <span>Chamar no WhatsApp</span>
+                  <span>WhatsApp</span>
                 </a>
               </div>
             </div>
@@ -2415,7 +2324,7 @@
           <img src="img/logo-viva-paraty.svg" alt="Selo Oficial Viva Paraty! Agência de Roteiros" width="58" height="58" loading="lazy" />
           <div>
             <h4>Viva Paraty! — Agência de Roteiros</h4>
-            <p>Dicas e roteiros selecionados a dedo em Paraty, RJ · WhatsApp (24) 99963-3930</p>
+            <p>Paraty, RJ</p>
           </div>
         </div>
 
@@ -2430,12 +2339,12 @@
       </div>
 
       <div class="footer-bottom">
-        <p>© 2026 Viva Paraty! Agência de Roteiros — R. Ten. Francisco Antonio, Centro Histórico, Paraty - RJ, 23970-000. Todos os direitos reservados.</p>
+        <p>© 2026 Viva Paraty! Agência de Roteiros</p>
         <p>
-          Créditos fotográficos de paisagens regionais:
+          Fotos:
           "<a href="https://commons.wikimedia.org/wiki/File:At_Paraty,_Brazil_2017_015.jpg" target="_blank" rel="noopener noreferrer">At Paraty, Brazil 2017 015</a>" por Mike Peel (<a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>);
           "<a href="https://commons.wikimedia.org/wiki/File:Paraty_Cascades4.jpg" target="_blank" rel="noopener noreferrer">Paraty Cascades4</a>" por Adrian Michael (<a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a>);
-          "<a href="https://commons.wikimedia.org/wiki/File:Saco_do_Mamangu%C3%A1_-_panoramio.jpg" target="_blank" rel="noopener noreferrer">Saco do Mamanguá</a>" por TMbux (<a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a>), via Wikimedia Commons, e acervo autoral <a href="https://www.instagram.com/vivaparatyrj/" target="_blank" rel="noopener noreferrer">@vivaparatyrj</a>.
+          "<a href="https://commons.wikimedia.org/wiki/File:Saco_do_Mamangu%C3%A1_-_panoramio.jpg" target="_blank" rel="noopener noreferrer">Saco do Mamanguá</a>" por TMbux (<a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a>) (Wikimedia Commons) e <a href="https://www.instagram.com/vivaparatyrj/" target="_blank" rel="noopener noreferrer">@vivaparatyrj</a>.
         </p>
       </div>
     </div>
