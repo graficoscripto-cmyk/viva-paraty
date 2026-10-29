@@ -1,48 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" width="220" height="220" role="img" aria-label="Viva Paraty! Agência de Roteiros">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Agência Viva Paraty">
   <defs>
-    <linearGradient id="bgTrop" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0E382C"/>
-      <stop offset="55%" stop-color="#145A43"/>
-      <stop offset="100%" stop-color="#0A2921"/>
+    <linearGradient id="pinTeal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1ED0C8"/>
+      <stop offset="100%" stop-color="#058E92"/>
     </linearGradient>
-    <linearGradient id="vivaRibbon" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#DF2F71"/>
-      <stop offset="100%" stop-color="#EE4B88"/>
+    <linearGradient id="skyNavy" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#062845"/>
+      <stop offset="100%" stop-color="#165C7D"/>
     </linearGradient>
-    <linearGradient id="paratyRibbon" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#22C56E"/>
-      <stop offset="100%" stop-color="#48DC8A"/>
+    <linearGradient id="sunGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFDA47"/>
+      <stop offset="100%" stop-color="#F29B0A"/>
     </linearGradient>
-    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="125%">
-      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#061813" flood-opacity="0.42"/>
-    </filter>
   </defs>
-
-  <!-- Base circular seal -->
-  <circle cx="110" cy="110" r="104" fill="url(#bgTrop)"/>
-
-  <!-- Subtle wave & leaf watermark inside seal -->
-  <path d="M 18 145 Q 64 128 110 144 T 202 140 L 202 205 L 18 205 Z" fill="#18765A" opacity="0.28"/>
-
-  <!-- Outer double white stamp rings -->
-  <circle cx="110" cy="110" r="98" fill="none" stroke="#FFFFFF" stroke-width="2.5" opacity="0.92"/>
-  <circle cx="110" cy="110" r="91" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.88"/>
-
-  <!-- Dotted inner stamp ring -->
-  <circle cx="110" cy="110" r="82" fill="none" stroke="#FFFFFF" stroke-width="3.4" stroke-linecap="round" stroke-dasharray="0.5 9.8" opacity="0.95"/>
-
-  <!-- "Viva" Magenta Ribbon -->
-  <g transform="translate(110, 74) rotate(-6)" filter="url(#softShadow)">
-    <rect x="-46" y="-21" width="92" height="38" rx="10" fill="url(#vivaRibbon)"/>
-    <text x="0" y="7" text-anchor="middle" fill="#FFFFFF" font-family="'Fraunces', 'Georgia', serif" font-weight="800" font-style="italic" font-size="31" letter-spacing="-0.5">Viva</text>
-  </g>
-
-  <!-- "Paraty!" Emerald Ribbon + Deep Navy Text -->
-  <g transform="translate(110, 115) rotate(-5)" filter="url(#softShadow)">
-    <rect x="-68" y="-22" width="136" height="42" rx="11" fill="url(#paratyRibbon)"/>
-    <text x="0" y="8" text-anchor="middle" fill="#153278" font-family="'Fraunces', 'Georgia', serif" font-weight="900" font-style="italic" font-size="32" letter-spacing="-0.6">Paraty!</text>
-  </g>
-
-  <!-- "Agência de Roteiros" -->
-  <text x="110" y="156" text-anchor="middle" fill="#FFFFFF" font-family="'Plus Jakarta Sans', 'Segoe UI', sans-serif" font-weight="600" font-size="11.5" letter-spacing="0.8" opacity="0.96">Agência de Roteiros</text>
+  <path d="M60 6 C32 6 12 27 12 54 C12 78 44 102 60 115 C76 102 108 78 108 54 C108 27 88 6 60 6 Z" fill="url(#pinTeal)"/>
+  <circle cx="60" cy="53" r="39" fill="url(#skyNavy)"/>
+  <circle cx="72" cy="40" r="11" fill="url(#sunGold)"/>
+  <path d="M55 62 L76 47 L98 60 L98 66 L55 66 Z" fill="#072D5B"/>
+  <path d="M23 48 L48 33 L62 46 L62 76 L23 76 Z" fill="#FFFFFF"/>
+  <path d="M48 23 L48 34 M44 27 L52 27" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+  <rect x="24" y="54" width="16" height="20" fill="#F6AA1C"/>
+  <rect x="44" y="45" width="7" height="11" rx="3.5" fill="#072D5B"/>
+  <rect x="44" y="60" width="7" height="14" rx="3.5" fill="#072D5B"/>
+  <path d="M26 76 Q46 66 64 73 T95 70 L90 84 L32 84 Z" fill="#0CA8AD" stroke="#FFFFFF" stroke-width="3.5"/>
 </svg>

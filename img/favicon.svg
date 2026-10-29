@@ -1,15 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Viva Paraty">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Agência Viva Paraty">
   <defs>
-    <linearGradient id="favBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0E382C"/>
-      <stop offset="50%" stop-color="#16995A"/>
-      <stop offset="100%" stop-color="#0A2921"/>
+    <linearGradient id="pinTeal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1ED0C8"/>
+      <stop offset="100%" stop-color="#058E92"/>
+    </linearGradient>
+    <linearGradient id="skyNavy" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#062845"/>
+      <stop offset="100%" stop-color="#165C7D"/>
+    </linearGradient>
+    <linearGradient id="sunGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFDA47"/>
+      <stop offset="100%" stop-color="#F29B0A"/>
     </linearGradient>
   </defs>
-  <circle cx="60" cy="60" r="57" fill="url(#favBg)"/>
-  <circle cx="60" cy="60" r="52" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.9"/>
-  <circle cx="60" cy="60" r="45.5" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="0.5 7.5" opacity="0.9"/>
-  <!-- Stylized V° monogram + Viva magenta dot -->
-  <path d="M36 42 L53 84 L74 38" fill="none" stroke="#FFFFFF" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="82" cy="46" r="7.5" fill="#E63E7A" stroke="#FFFFFF" stroke-width="2.5"/>
+  <!-- Map Pin Outer Shape -->
+  <path d="M60 6 C32 6 12 27 12 54 C12 78 44 102 60 115 C76 102 108 78 108 54 C108 27 88 6 60 6 Z" fill="url(#pinTeal)"/>
+  <!-- Inner Circular Window -->
+  <circle cx="60" cy="53" r="39" fill="url(#skyNavy)"/>
+  <!-- Sun -->
+  <circle cx="72" cy="40" r="11" fill="url(#sunGold)"/>
+  <!-- Mountain -->
+  <path d="M55 62 L76 47 L98 60 L98 66 L55 66 Z" fill="#072D5B"/>
+  <!-- Colonial Church Left -->
+  <path d="M23 48 L48 33 L62 46 L62 76 L23 76 Z" fill="#FFFFFF"/>
+  <!-- Church Cross -->
+  <path d="M48 23 L48 34 M44 27 L52 27" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+  <!-- Church Arches & Gold Wall -->
+  <rect x="24" y="54" width="16" height="20" fill="#F6AA1C"/>
+  <rect x="44" y="45" width="7" height="11" rx="3.5" fill="#072D5B"/>
+  <rect x="44" y="60" width="7" height="14" rx="3.5" fill="#072D5B"/>
+  <!-- Waves -->
+  <path d="M26 76 Q46 66 64 73 T95 70 L90 84 L32 84 Z" fill="#0CA8AD" stroke="#FFFFFF" stroke-width="3.5"/>
 </svg>
