@@ -1,4 +1,4 @@
-/* Viva Paraty! — motion e interação (vanilla, sem dependências) */
+/* Viva Paraty! — motion e interação (vanilla, sem dependências, zero contadores genéricos) */
 (function () {
   'use strict';
   var d = document, de = d.documentElement;
@@ -56,34 +56,20 @@
   } else rv.forEach(function (el) { el.classList.add('in'); });
   setTimeout(function () { rv.forEach(function (el) { if (el.getBoundingClientRect().top < innerHeight) el.classList.add('in'); }); }, 900);
 
-  /* ---------- contadores ---------- */
-  var cio = 'IntersectionObserver' in window && new IntersectionObserver(function (es) {
-    es.forEach(function (e) {
-      if (!e.isIntersecting) return; cio.unobserve(e.target);
-      var el = e.target, to = +el.dataset.count, suf = el.dataset.suffix || '', t0 = performance.now(), dur = 1700;
-      if (reduce) { el.textContent = to + suf; return; }
-      (function tick(t) {
-        var p = clamp((t - t0) / dur, 0, 1);
-        el.textContent = Math.round(to * ease(p)) + suf;
-        if (p < 1) requestAnimationFrame(tick);
-      })(t0);
+  /* ---------- Motion Graphic da Logo Viva Paraty (.viva-scene) ---------- */
+  var vivaScene = $('.viva-scene'), pillars = $$('.viva-pillar');
+  function setPillar(name) {
+    if (!vivaScene) return;
+    vivaScene.setAttribute('data-focus', name);
+    pillars.forEach(function (btn) {
+      btn.classList.toggle('active', btn.dataset.pillar === name);
     });
-  }, { threshold: 0.5 });
-  $$('[data-count]').forEach(function (el) { if (cio) cio.observe(el); else el.textContent = el.dataset.count + (el.dataset.suffix || ''); });
-
-  /* ---------- próxima saída (11h, horário de Brasília) ---------- */
-  var live = $('[data-live]');
-  function tickLive() {
-    if (!live) return;
-    var parts = new Intl.DateTimeFormat('pt-BR', { timeZone: 'America/Sao_Paulo', hour: 'numeric', minute: 'numeric', hour12: false }).formatToParts(new Date());
-    var h = +parts.find(function (p) { return p.type === 'hour'; }).value % 24;
-    var m = +parts.find(function (p) { return p.type === 'minute'; }).value;
-    var now = h * 60 + m, dep = 11 * 60, diff = dep - now, day = 'hoje';
-    if (diff <= 0) { diff += 1440; day = 'amanhã'; }
-    var hh = Math.floor(diff / 60), mm = diff % 60;
-    live.textContent = 'Próxima saída ' + day + ' às 11h · faltam ' + (hh ? hh + 'h ' : '') + mm + 'min';
   }
-  tickLive(); setInterval(tickLive, 30000);
+  pillars.forEach(function (btn) {
+    btn.addEventListener('click', function () { setPillar(btn.dataset.pillar); });
+    btn.addEventListener('mouseenter', function () { setPillar(btn.dataset.pillar); });
+  });
+  if (vivaScene) setPillar('igreja');
 
   /* ---------- carrossel horizontal que prende na rolagem ---------- */
   var hs = $('.hs'), hsTrack = hs && $('.hs-track', hs);
@@ -116,6 +102,11 @@
         el.style.transform = 'translate3d(0,' + (c * sp * -1).toFixed(1) + 'px,0)';
       });
     }
+    if (vivaScene) {
+      var vr = vivaScene.getBoundingClientRect();
+      var vp = clamp((vh - vr.top) / (vh + vr.height), 0, 1);
+      vivaScene.style.setProperty('--logo-p', vp.toFixed(3));
+    }
     if (hs && hs.classList.contains('on')) {
       var r = hs.getBoundingClientRect(), tot = hs.offsetHeight - innerHeight;
       var p = clamp(-r.top / tot, 0, 1);
@@ -129,9 +120,13 @@
     }
     if (op) {
       var or = op.getBoundingClientRect(), po = clamp(-or.top / (op.offsetHeight - vh), 0, 1);
-      var e = ease(clamp(po / 0.6, 0, 1)), a = (1 - e) * 16;
-      $('.op-img', op).style.clipPath = 'inset(' + a + '% ' + a + '% ' + a + '% ' + a + '% round ' + (a * 1.5) + 'px)';
-      var t = $('.op-t', op); t.style.opacity = clamp((po - 0.55) / 0.3, 0, 1); t.style.transform = 'translateY(' + (1 - clamp((po - 0.55) / 0.3, 0, 1)) * 40 + 'px)';
+      var e = ease(clamp(po / 0.58, 0, 1));
+      var ay = (1 - e) * 12, ax = (1 - e) * 7;
+      $('.op-img', op).style.clipPath = 'inset(' + ay + '% ' + ax + '% ' + ay + '% ' + ax + '% round ' + (ay * 2.2) + 'px)';
+      var t = $('.op-t', op);
+      var tp = clamp((po - 0.18) / 0.42, 0.15, 1);
+      t.style.opacity = tp;
+      t.style.transform = 'translateY(' + (1 - tp) * 24 + 'px)';
     }
   }
   function req() { if (!ticking) { ticking = true; requestAnimationFrame(frame); } }
