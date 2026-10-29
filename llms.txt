@@ -29,3 +29,12 @@
 
 ## Como Reservar
 - O visitante escolhe os roteiros desejados no planejador interativo do site ("Monte seu Roteiro em Paraty") informando formato (privativo ou compartilhado), quantidade de adultos/crianças e período da viagem, e finaliza diretamente pelo WhatsApp oficial +55 (24) 99963-3930 com atendimento humano rápido.
+
+## Páginas do site
+- https://viva-paraty.vercel.app/ — início
+- https://viva-paraty.vercel.app/roteiros.html — passeios e mapa da baía
+- https://viva-paraty.vercel.app/baia-de-paraty.html — Baía de Paraty (Lagoa Azul & Ilhas)
+- https://viva-paraty.vercel.app/saco-do-mamangua.html — Saco do Mamanguá
+- https://viva-paraty.vercel.app/jeep-cachoeiras.html — Jeep 4x4 Cachoeiras & Alambiques
+- https://viva-paraty.vercel.app/centro-historico.html — Centro Histórico & roteiros combinados
+- https://viva-paraty.vercel.app/monte-seu-roteiro.html — monte seu roteiro (WhatsApp)
